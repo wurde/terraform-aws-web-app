@@ -26,7 +26,7 @@ Reasons why this module is a good candidate:
 Example usage within a Terraform configuration:
 
 ```terraform
-module "static-website" {
+module "web-app-aws" {
   source = "github.com/wurde/web-app-aws"
 
   dist_dir      = "./dist"
