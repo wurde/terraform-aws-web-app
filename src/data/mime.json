@@ -346,6 +346,7 @@
   "mag": "application/vnd.ecowin.chart",
   "maker": "application/vnd.framemaker",
   "man": "text/troff",
+  "map": "application/json",
   "mathml": "application/mathml+xml",
   "mb": "application/mathematica",
   "mbk": "application/vnd.mobius.mbk",
