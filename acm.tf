@@ -17,10 +17,10 @@ resource "aws_acm_certificate" "ssl" {
   }
 }
 
-resource "aws_acm_certificate_validation" "cert" {
-  certificate_arn         = aws_acm_certificate.ssl.arn
-  validation_record_fqdns = aws_route53_record.cert_validation[*].fqdn
-}
+# resource "aws_acm_certificate_validation" "cert" {
+#   certificate_arn         = aws_acm_certificate.ssl.arn
+#   validation_record_fqdns = aws_route53_record.cert_validation[*].fqdn
+# }
 
 output "validation" {
   value = aws_acm_certificate.ssl.domain_validation_options
