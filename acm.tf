@@ -23,6 +23,6 @@ resource "aws_acm_certificate_validation" "cert" {
 }
 
 output "validation" {
-  values = aws_acm_certificate.ssl.domain_validation_options
+  value = aws_acm_certificate.ssl.domain_validation_options
   description = "Printing ACM validation options."
 }
