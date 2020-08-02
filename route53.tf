@@ -70,13 +70,13 @@ resource "aws_route53_record" "CNAME" {
   ttl     = 86400
 }
 
-# resource "aws_route53_record" "cert_validation" {
-#   for_each = toset(aws_acm_certificate.ssl.domain_validation_options)
+resource "aws_route53_record" "cert_validation" {
+  count = length(var.alias_domains) + 1
 
-#   name    = each.value.resource_record_name
-#   type    = each.value.resource_record_type
-#   records = [each.value.resource_record_value]
+  zone_id = aws_route53_zone.domain.zone_id
+  ttl     = 60
 
-#   zone_id = aws_route53_zone.domain.zone_id
-#   ttl     = 60
-# }
+  name    = tolist(aws_acm_certificate.ssl.domain_validation_options)[count.index].resource_record_name
+  type    = tolist(aws_acm_certificate.ssl.domain_validation_options)[count.index].resource_record_type
+  records = [tolist(aws_acm_certificate.ssl.domain_validation_options)[count.index].resource_record_value]
+}
