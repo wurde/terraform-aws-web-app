@@ -27,7 +27,8 @@ Example usage within a Terraform configuration:
 
 ```terraform
 module "web-app" {
-  source = "wurde/aws/web-app"
+  source  = "wurde/web-app/aws"
+  version = "2.0.0"
 
   dist_dir      = "./dist"
   domain        = "example.com"
