@@ -17,6 +17,14 @@ resource "aws_s3_bucket" "domain" {
     index_document = "index.html"
   }
 
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
   # Enable versioning. Once you version-enable a bucket, it can never
   #   return to an unversioned state. You can, however, suspend versioning
   #   on that bucket.
