@@ -1,6 +1,3 @@
-# Define input variables.
-# https://www.terraform.io/docs/configuration/variables.html
-
 variable "dist_dir" {
   type        = string
   description = "The distribution directory to serve via static asset host."

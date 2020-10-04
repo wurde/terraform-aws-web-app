@@ -35,12 +35,19 @@ Example name servers provided via Route53:
     ns-153.awsdns-10.com.
     ns-1138.awsdns-14.org.
 
-## Cost Estimate
+## Cost Estimates
 
 **$2 dollars a month.**
 Primary charges are Route53 Hosted Zone and S3 storage.
 (If the website receives zero traffic then at most you'll be
 charged is $0.55 cents for Route53.)
+
+## Terraform 0.13
+
+This module requires a Terraform version between `v0.13 and v1.0`.
+
+Terraform is a DevOps tool that enables Infrastructure as Code (IaC).
+[Learn more about it here](https://www.terraform.io).
 
 ## License
 
