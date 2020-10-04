@@ -53,6 +53,40 @@ servers provided via Route53:
     ns-153.awsdns-10.com.
     ns-1138.awsdns-14.org.
 
+## Variables
+
+Required:
+
+- **dist_dir**
+
+      type: string
+      description: The distribution directory to serve via static asset host
+
+- **domain**
+
+      type: string
+      description: The primary domain name.
+
+Optional:
+
+- **alias_domains**
+
+      type: list(string)
+      description: The other alias domain names (www.example.com).
+      default: []
+
+- **default_ttl**
+
+      type: number
+      description: The default TTL in seconds (default is 1 day).
+      default: 86400
+
+- **country_blacklist**
+
+      type: list(string)
+      description: List of countries (ISO 3166-1-alpha-2 codes) to blacklist.
+      default: ["IR", "KP"]
+
 ## Cost Estimates
 
 **$2 dollars a month.**
