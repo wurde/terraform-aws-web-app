@@ -21,7 +21,7 @@ terraform {
 }
 ```
 
-Next define the Terraform module in `web-app-aws.tf`:
+Next define the Terraform module in `web-app.tf`:
 
 ```terraform
 module "web-app" {
