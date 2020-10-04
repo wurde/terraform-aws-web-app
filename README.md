@@ -7,22 +7,6 @@ It hosts all static assets found in the directory on S3.
 Those assets get added to a CloudFront distribution.
 Then all traffic to the domain get routed to CloudFront.
 
-## Consider this first
-
-Prefer a managed solution over custom code. Before exploring
-the Terraform option, consider the alternatives that'll
-save time and money. Consider these solutions first:
-
-- [Firebase](https://firebase.google.com) by Google.
-- [Amplify](https://aws.amazon.com/amplify) by AWS.
-- [Netlify](https://www.netlify.com)
-- [GitHub Pages](https://pages.github.com)
-
-Reasons why this module is a good candidate:
-
-- Infrastructure is already managed by Terraform.
-- Requirement for a cloud-agnostic IaC solution.
-
 ## Getting started
 
 Example usage within a Terraform configuration:
