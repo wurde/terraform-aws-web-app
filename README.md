@@ -36,15 +36,12 @@ Example name servers provided by AWS:
     ns-153.awsdns-10.com.
     ns-1138.awsdns-14.org.
 
-## Pricing Estimate
+## Cost Estimate
 
-**~2 dollars a month.**
+**$2 dollars a month.**
 Primary charges are Route53 Hosted Zone and S3 storage.
-
-## Why Terraform?
-
-Terraform enables Infrastructure as Code.
-[Learn more about it here](https://www.terraform.io).
+(If the website receives zero traffic then at most you'll be
+charged is $0.55 cents for Route53.)
 
 ## License
 
