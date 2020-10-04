@@ -13,7 +13,7 @@ Start by adding Terraform to the `.gitignore` file:
 
     npx gitignore terraform
 
-Next define a simple Terraform configuration in `terraform.tf`:
+Next define a Terraform configuration in `terraform.tf`:
 
 ```terraform
 terraform {
@@ -38,9 +38,12 @@ Next initialize the Terraform working directory:
 
     terraform init
 
-Next run `terraform apply` manually or automate via CI/CD.
+Next run the plan and apply commands.
+    
+    terraform plan    #=> generates an execution plan.
+    terraform apply   #=> builds infrastructure on AWS.
 
-Then verify domain ownership between AWS and the domain
+Finally verify domain ownership between AWS and the domain
 name provider. Route53 generates custom DNS name servers
 to set within the domain name provider. Example name
 servers provided via Route53:
