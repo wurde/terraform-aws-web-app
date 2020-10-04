@@ -2,12 +2,16 @@
 
 This Terraform module deploys a web application to AWS.
 It uses S3, CloudFront, and Route53 services. The only
-requirements are a domain and distribution directory.
+requirements are a domain and a distribution directory.
 It hosts all static assets found in the directory on S3.
 Those assets get added to a CloudFront distribution.
 Then all traffic to the domain get routed to CloudFront.
 
 ## Getting started
+
+Start by adding Terraform to your `.gitignore` file:
+
+    npx gitignore terraform
 
 Example usage within a Terraform configuration:
 
