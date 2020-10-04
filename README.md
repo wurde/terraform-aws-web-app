@@ -22,14 +22,13 @@ module "web-app" {
 }
 ```
 
-Next run `terraform apply`. Or automate via CI/CD pipelines
-(GitHub Actions?).
+Next run `terraform apply` manually or automate via CI/CD.
 
-A necessary manual step is adding the custom DNS name
-servers to your domain name provider (Google Domains?).
-This enables domain ownership verification.
+A necessary step is to verify domain ownership between AWS
+and the domain name provider. Route53 generates custom DNS
+name servers to set within the domain name provider.
 
-Example name servers provided by AWS:
+Example name servers provided via Route53:
 
     ns-111.awsdns-32.net. 
     ns-1211.awsdns-9.co.uk.
