@@ -26,7 +26,7 @@ Next define the Terraform module in `web-app.tf`:
 ```terraform
 module "web-app" {
   source  = "wurde/web-app/aws"
-  version = "1.2.0"
+  version = "1.3.0"
 
   dist_dir      = "./dist"
   domain        = "example.com"
