@@ -9,11 +9,19 @@ Then all traffic to the domain get routed to CloudFront.
 
 ## Getting started
 
-Start by adding Terraform to your `.gitignore` file:
+Start by adding Terraform to the `.gitignore` file:
 
     npx gitignore terraform
 
-Example usage within a Terraform configuration:
+Next define a simple Terraform configuration in `terraform.tf`:
+
+```terraform
+terraform {
+  required_version = "~> 0.13"
+}
+```
+
+Next define the Terraform module in `web-app-aws.tf`:
 
 ```terraform
 module "web-app" {
@@ -25,6 +33,10 @@ module "web-app" {
   alias_domains = ["www.example.com"]
 }
 ```
+
+Next initialize the Terraform working directory:
+
+    terraform init
 
 Next run `terraform apply` manually or automate via CI/CD.
 
