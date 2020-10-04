@@ -20,6 +20,12 @@ variable "default_ttl" {
   default     = 86400
 }
 
+variable "price_class" {
+  type        = string
+  description = "Control CloudFront costs (default is PriceClass_All)."
+  default     = "PriceClass_All"
+}
+
 variable "country_blacklist" {
   type        = list(string)
   description = "List of countries (ISO 3166-1-alpha-2 codes) to blacklist."

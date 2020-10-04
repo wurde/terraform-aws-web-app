@@ -11,6 +11,9 @@ resource "aws_cloudfront_distribution" "cdn" {
   # Enable the distribution.
   enabled = true
 
+  # The price class for this distribution. (PriceClass_All, PriceClass_200, PriceClass_100)
+  price_class = var.price_class
+
   # An origin for this distribution (multiple allowed).
   origin {
     # The DNS domain name of your origin.

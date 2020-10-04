@@ -81,6 +81,12 @@ Optional:
       description: The default TTL in seconds (default is 1 day).
       default: 86400
 
+- **price_class**
+
+      type: string
+      description: Control CloudFront costs (default is PriceClass_All).
+      default: "PriceClass_All"
+
 - **country_blacklist**
 
       type: list(string)
