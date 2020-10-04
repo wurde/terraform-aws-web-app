@@ -24,11 +24,10 @@ module "web-app" {
 
 Next run `terraform apply` manually or automate via CI/CD.
 
-A necessary step is to verify domain ownership between AWS
-and the domain name provider. Route53 generates custom DNS
-name servers to set within the domain name provider.
-
-Example name servers provided via Route53:
+Then verify domain ownership between AWS and the domain
+name provider. Route53 generates custom DNS name servers
+to set within the domain name provider. Example name
+servers provided via Route53:
 
     ns-111.awsdns-32.net. 
     ns-1211.awsdns-9.co.uk.
@@ -40,7 +39,7 @@ Example name servers provided via Route53:
 **$2 dollars a month.**
 Primary charges are Route53 Hosted Zone and S3 storage.
 (If the website receives zero traffic then at most you'll be
-charged is $0.55 cents for Route53.)
+charged $0.55 cents for Route53.)
 
 ## Terraform 0.13
 
