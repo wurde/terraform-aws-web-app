@@ -1,9 +1,11 @@
-# Web Application
+# Terraform a Web App on AWS
 
-Terraform module for deploying a web application to AWS.
-This module assumes an app deployed using pre-rendered
-static assets distributed via global content delivery
-network.
+This Terraform module deploys a web application to AWS.
+It uses S3, CloudFront, and Route53 services. The only
+requirements are a domain and distribution directory.
+It hosts all static assets found in the directory on S3.
+Those assets get added to a CloudFront distribution.
+Then all traffic to the domain get routed to CloudFront.
 
 ## Consider this first
 
